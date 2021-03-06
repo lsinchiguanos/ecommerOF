@@ -18,8 +18,8 @@ import java.util.logging.Logger;
  */
 public class ConexionDB implements Serializable{
     private final String user = "postgres";
-    private final String pass = "1234567890";
-    private final String url = "jdbc:postgresql://156.96.46.31:5432/pi_vi2";
+    private final String pass = "12345";
+    private final String url = "jdbc:postgresql://localhost:5432/cyclestore";
     private Connection conecction;
     private static final long serialVersionUID = 1L;
 

@@ -12,7 +12,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="input, text, effect, focus, transition, interaction, inspiration, web design" />
-
         <!--===============================================================================================-->	
         <link rel="icon" type="image/png" href="Login/images/icons/favicon.ico"/>
         <!--===============================================================================================-->
@@ -123,12 +122,6 @@
                     </label>
                 </span>
                 <span class="input input--hoshi"style="margin-top:-20px; width:300px;margin-left: 55px" >
-                    <input class="input__field input__field--hoshi" type="text" id="Estado" />
-                    <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="estado">
-                        <span class="input__label-content input__label-content--hoshi">Estado:</span>
-                    </label>
-                </span>
-                <span class="input input--hoshi" style="margin-top:-20px; width:300px; margin-left:415px">
                     <input class="input__field input__field--hoshi" type="tels" id="Telefono" />
                     <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="Telefono">
                         <span class="input__label-content input__label-content--hoshi">Teléfono:</span>
@@ -137,13 +130,16 @@
             </section>
         
                 <div >
-                    <button class="login100-form-btn" style="width: 200px; margin-left:550px;margin-top:-90px">
+                    <button id="btnRegistrarUsuario" class="login100-form-btn" style="width: 200px; margin-left:550px;margin-top:-90px">
                         Registrarse
                     </button>
                 </div>
         </form>
     </div>
     <script src="css-text/js/classie.js"></script>
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="jsservlets/clientejs.js" type="text/javascript"></script>
     <script>
         (function () {
             if (!String.prototype.trim) {

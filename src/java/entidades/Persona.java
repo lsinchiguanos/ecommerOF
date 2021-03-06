@@ -23,6 +23,19 @@ public class Persona {
     public Persona() {
     }
     
+    public Persona(String persona_dni, String persona_apellido_materno, String persona_apellido_paterno, String persona_nombre, String persona_fecha_nacimiento, String persona_direccion, String persona_telefono, String persona_email) {
+        this.persona_dni = persona_dni;
+        this.persona_apellido_materno = persona_apellido_materno;
+        this.persona_apellido_paterno = persona_apellido_paterno;
+        this.persona_nombre = persona_nombre;
+        this.persona_fecha_nacimiento = persona_fecha_nacimiento;
+        this.persona_direccion = persona_direccion;
+        this.persona_telefono = persona_telefono;
+        this.persona_email = persona_email;
+    }
+    
+    
+    
     public String getPersona_dni() {
         return persona_dni;
     }
