@@ -5,7 +5,6 @@
  */
 package controllers;
 
-import entidades.Transaccion;
 import entidades.TransaccionDetalle;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
