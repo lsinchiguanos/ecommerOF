@@ -41,6 +41,9 @@
         <link href="css-text/css/set1.css" rel="stylesheet" type="text/css"/>
         <link href="css-text/css/normalize.css" rel="stylesheet" type="text/css"/>
     </head>
+    
+    <%HttpSession s = request.getSession();%>
+    
     <body>
         <header class="main-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
@@ -55,7 +58,7 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item "><a class="nav-link" href="index.jsp">Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
+                            <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
@@ -136,9 +139,9 @@
                 </div>
         </form>
     </div>
-    <script src="css-text/js/classie.js"></script>
+    <script src="css-text/js/classie.js" type="text/javascript"></script>
     <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" type="text/javascript"></script>
     <script src="jsservlets/clientejs.js" type="text/javascript"></script>
     <script>
         (function () {

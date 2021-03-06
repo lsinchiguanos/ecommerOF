@@ -57,7 +57,7 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item "><a class="nav-link" href="index.jsp">Home</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
+                            <li class="nav-item active" id="iniciosesionop"><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
@@ -115,13 +115,28 @@
             </div>
         </div>
         <!--===============================================================================================-->	
-        <script src="Login/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="Login/vendor/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
         <!--===============================================================================================-->
-        <script src="Login/vendor/bootstrap/js/popper.js"></script>
-        <script src="Login/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="Login/vendor/bootstrap/js/popper.js" type="text/javascript"></script>
+        <script src="Login/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <!--===============================================================================================-->
-        <script src="Login/vendor/select2/select2.min.js"></script>
+        <script src="Login/vendor/select2/select2.min.js" type="text/javascript"></script>
         <!--===============================================================================================-->
-        <script src="Login/js/main.js"></script>
+        <script src="Login/js/main.js" type="text/javascript"></script>
+        <!--===============================================================================================-->
+        <script type="text/javascript">
+            var sesion_id;
+            function ocultarControles() {
+                sesion_id = <%=session.getAttribute("cliente_id")%>
+                console.log(sesion_id);
+                if (sesion_id > 0) {
+                    console.log('Si esta logeado');
+                    document.getElementById('iniciosesionop').style.display = 'none';
+                }
+            }
+            ;
+
+            $(document).ready(ocultarControles());
+        </script>
     </body>
 </html>

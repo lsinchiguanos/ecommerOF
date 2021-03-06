@@ -30,6 +30,8 @@
 
     </head>
 
+    <%HttpSession s = request.getSession();%>
+    
     <body>
         <header class="main-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
@@ -44,7 +46,7 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
-                            <li class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
+                            <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="checkout.jsp">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
@@ -521,20 +523,33 @@
         </div>
         <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
         <!--  JS  -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="js/popper.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
         <!--  PLUGINS -->
-        <script src="js/jquery.superslides.min.js"></script>
-        <script src="js/bootstrap-select.js"></script>
-        <script src="js/inewsticker.js"></script>
-        <script src="js/bootsnav.js."></script>
-        <script src="js/images-loded.min.js"></script>
-        <script src="js/isotope.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/baguetteBox.min.js"></script>
-        <script src="js/form-validator.min.js"></script>
-        <script src="js/contact-form-script.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="js/jquery.superslides.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap-select.js" type="text/javascript"></script>
+        <script src="js/inewsticker.js" type="text/javascript"></script>
+        <script src="js/bootsnav.js." type="text/javascript"></script>
+        <script src="js/images-loded.min.js" type="text/javascript"></script>
+        <script src="js/isotope.min.js" type="text/javascript"></script>
+        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="js/baguetteBox.min.js" type="text/javascript"></script>
+        <script src="js/form-validator.min.js" type="text/javascript"></script>
+        <script src="js/contact-form-script.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var sesion_id;
+            function ocultarControles() {
+                sesion_id = <%=session.getAttribute("cliente_id")%>
+                console.log(sesion_id);
+                if (sesion_id > 0) {
+                    console.log('Si esta logeado');
+                    document.getElementById('iniciosesionop').style.display = 'none';
+                }
+            }
+            ;
+            $(document).ready(ocultarControles());
+        </script>
     </body>
 </html>
