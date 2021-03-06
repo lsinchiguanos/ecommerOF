@@ -40,6 +40,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     </head>
+
+    <%HttpSession s = request.getSession();%>
+
     <body>
         <header class="main-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
@@ -65,7 +68,7 @@
         <div class="limiter" >
             <div class="container-login100" style="background-image: url('images/index.jpg');" style="opacity: 0.8">
                 <div class="wrap-login100 p-t-190 p-b-30">
-                    <form class="login100-form validate-form">
+                    <form class="login100-form validate-form" action="LoginServlet">
                         <div class="login100-form-avatar" style="margin-top:-160px">
                             <img src="images/icons.gif" alt="AVATAR">
                         </div>
@@ -75,7 +78,7 @@
                         </span>
 
                         <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required" style="margin-top:-20px">
-                            <input class="input100" type="text" name="username" placeholder="Usuario">
+                            <input class="input100" type="text" name="username" id="username" placeholder="Email">
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
                                 <i class="fa fa-user"></i>
@@ -83,7 +86,7 @@
                         </div>
 
                         <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-                            <input class="input100" type="password" name="pass" placeholder="Contraseña">
+                            <input class="input100" type="password" name="pass" id="pass" placeholder="Contraseña">
                             <span class="focus-input100"></span>
                             <span class="symbol-input100">
                                 <i class="fa fa-lock"></i>
@@ -120,8 +123,5 @@
         <script src="Login/vendor/select2/select2.min.js"></script>
         <!--===============================================================================================-->
         <script src="Login/js/main.js"></script>
-
-
-
     </body>
 </html>

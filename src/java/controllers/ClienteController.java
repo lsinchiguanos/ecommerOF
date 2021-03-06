@@ -100,4 +100,33 @@ public class ClienteController extends conexion.ConexionDB {
         rs = pst.executeQuery();
         return mensaje;
     }
+    
+    public int SearchClienteLogin(Cliente cliente) throws SQLException {
+        int cliente_id = 0;
+        sql_command = "Select cliente_id from cliente where cliente_email = '" + cliente.getPersona_email() + "' and cliente_pass = '" + cliente.getCliente_pass() + "'";
+        try {
+            pst = getConecction().prepareStatement(sql_command);
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                cliente_id = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            try {
+                if (isConected()) {
+                    getConecction().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+        return cliente_id;
+    }
 }

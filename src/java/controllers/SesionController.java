@@ -23,52 +23,32 @@ public class SesionController extends conexion.ConexionDB {
     public String newSession(Sesion sesion) throws SQLException {
         String mensaje = "La sesion se registro con éxito";
         sql_command = "INSERT INTO public.cliente_sesiones(\n"
-                + "	sec_clienteid, sec_hora, sec_ip, created_at)\n"
-                + "	VALUES (" + sesion.getCliente_id() + ",'" + sesion.getSec_hora() + "','" + sesion.getSec_ip() + "','" + sesion.getCreated_at() + "');";
+                + "	sec_clienteid, sec_ip)\n"
+                + "	VALUES (" + sesion.getCliente_id() + ",'" + sesion.getSec_ip() + "');";
 
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
-        return mensaje;
-    }
-
-    public String UpdateSession(Sesion sesion) throws SQLException {
-        String mensaje = "La sesion fue actualizada con éxito";
-        sql_command = "UPDATE public.cliente_sesiones\n"
-                + "	SET sec_hora='" + sesion.getSec_hora() + "', sec_ip='" + sesion.getSec_ip() + "', created_at='" + sesion.getCreated_at() + "'\n"
-                + "	WHERE sec_clienteid=" + sesion.getCliente_id() + ";";
-
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
-        return mensaje;
-    }
-
-    public String DeleteSession(Sesion sesion) throws SQLException {
-        String mensaje = "La sesion fue eliminada con éxito";
-        sql_command = "DELETE FROM public.cliente_sesiones\n"
-                + "	WHERE sec_clienteid=" + sesion.getCliente_id() + ";";
-
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
-        return mensaje;
-    }
-
-    public String SearchSession(Sesion sesion) throws SQLException {
-        String mensaje = "La sesion fue encontrada con éxito";
-        sql_command = "SELECT sec_clienteid, sec_hora, sec_ip, created_at\n"
-                + "	FROM public.cliente_sesiones;";
-
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
-        return mensaje;
-    }
-    
-     public String SearchSessionId(Sesion sesion) throws SQLException {
-        String mensaje = "La sesion fue encontrada con éxito";
-        sql_command = "SELECT sec_clienteid, sec_hora, sec_ip, created_at\n"
-                + "	FROM public.cliente_sesiones WHERE sec_clienteid=" + sesion.getCliente_id() + ";";
-
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
+        try {
+            pst = getConecction().prepareStatement(sql_command);
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                mensaje = "La sesion se registro con éxito";
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            try {
+                if (isConected()) {
+                    getConecction().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+        }
         return mensaje;
     }
 }

@@ -6,18 +6,6 @@
 /* global Swal */
 
 var clienteObj;
-var cliente_id;
-var cliente_dni;
-var cliente_apellido_paterno;
-var cliente_apellido_materno;
-var cliente_fecha_nacimiento;
-var cliente_direccion;
-var cliente_telefono;
-var cliente_email;
-var cliente_pass;
-var cliente_estado;
-var created_at;
-var updated_at;
 var accionProceso = 'registro';
 
 
