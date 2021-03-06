@@ -56,9 +56,9 @@
 
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                            <li class="nav-item "><a class="nav-link" href="index.jsp">Home</a></li>
-                            <li class="nav-item active" id="iniciosesionop"><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Catálogo</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
+                            <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
+                            <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>

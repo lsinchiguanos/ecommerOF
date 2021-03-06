@@ -6,7 +6,6 @@
 
 <html lang="es">
     <!-- Basic -->
-
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +50,7 @@
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
                             <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
-                            <li class="nav-item"><a class="nav-link" href="checkout.jsp">Catálogo</a></li>
+                            <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>
@@ -93,6 +92,15 @@
                 </div>
             </nav>
         </header>
+        <div class="top-search">
+            <div class="container">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                </div>
+            </div>
+        </div>
         <div class="all-title-box">
             <div class="container">
                 <div class="row">
@@ -107,267 +115,485 @@
             </div>
         </div>
 
-        <div class="cart-box-main">
+        <div class="shop-box-inner">
             <div class="container">
-                <div class="row new-account-login">
-                    <div class="col-sm-6 col-lg-6 mb-3">
-                        <div class="title-left">
-                            <h3>Account Login</h3>
-                        </div>
-                        <h5><a data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Click here to Login</a></h5>
-                        <form class="mt-3 collapse review-form-box" id="formLogin">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="InputEmail" class="mb-0">Email Address</label>
-                                    <input type="email" class="form-control" id="InputEmail" placeholder="Enter Email"> </div>
-                                <div class="form-group col-md-6">
-                                    <label for="InputPassword" class="mb-0">Password</label>
-                                    <input type="password" class="form-control" id="InputPassword" placeholder="Password"> </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+                        <div class="product-categori">
+                            <div class="search-product">
+                                <form action="#">
+                                    <input class="form-control" placeholder="Search here..." type="text">
+                                    <button type="submit"> <i class="fa fa-search"></i> </button>
+                                </form>
                             </div>
-                            <button type="submit" class="btn hvr-hover">Login</button>
-                        </form>
-                    </div>
-                    <div class="col-sm-6 col-lg-6 mb-3">
-                        <div class="title-left">
-                            <h3>Create New Account</h3>
-                        </div>
-                        <h5><a data-toggle="collapse" href="#formRegister" role="button" aria-expanded="false">Click here to Register</a></h5>
-                        <form class="mt-3 collapse review-form-box" id="formRegister">
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="InputName" class="mb-0">First Name</label>
-                                    <input type="text" class="form-control" id="InputName" placeholder="First Name"> </div>
-                                <div class="form-group col-md-6">
-                                    <label for="InputLastname" class="mb-0">Last Name</label>
-                                    <input type="text" class="form-control" id="InputLastname" placeholder="Last Name"> </div>
-                                <div class="form-group col-md-6">
-                                    <label for="InputEmail1" class="mb-0">Email Address</label>
-                                    <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email"> </div>
-                                <div class="form-group col-md-6">
-                                    <label for="InputPassword1" class="mb-0">Password</label>
-                                    <input type="password" class="form-control" id="InputPassword1" placeholder="Password"> </div>
-                            </div>
-                            <button type="submit" class="btn hvr-hover">Register</button>
-                        </form>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-lg-6 mb-3">
-                            <div class="checkout-address">
+                            <div class="filter-sidebar-left">
                                 <div class="title-left">
-                                    <h3>Billing address</h3>
+                                    <h3>Categories</h3>
                                 </div>
-                                <form class="needs-validation" novalidate>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="firstName">First name *</label>
-                                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                            <div class="invalid-feedback"> Valid first name is required. </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="lastName">Last name *</label>
-                                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                            <div class="invalid-feedback"> Valid last name is required. </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="username">Username *</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="username" placeholder="" required>
-                                            <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="email">Email Address *</label>
-                                        <input type="email" class="form-control" id="email" placeholder="">
-                                        <div class="invalid-feedback"> Please enter a valid email address for shipping updates. </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="address">Address *</label>
-                                        <input type="text" class="form-control" id="address" placeholder="" required>
-                                        <div class="invalid-feedback"> Please enter your shipping address. </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="address2">Address 2 *</label>
-                                        <input type="text" class="form-control" id="address2" placeholder=""> </div>
-                                    <div class="row">
-                                        <div class="col-md-5 mb-3">
-                                            <label for="country">Country *</label>
-                                            <select class="wide w-100" id="country">
-                                                <option value="Choose..." data-display="Select">Choose...</option>
-                                                <option value="United States">United States</option>
-                                            </select>
-                                            <div class="invalid-feedback"> Please select a valid country. </div>
-                                        </div>
-                                        <div class="col-md-4 mb-3">
-                                            <label for="state">State *</label>
-                                            <select class="wide w-100" id="state">
-                                                <option data-display="Select">Choose...</option>
-                                                <option>California</option>
-                                            </select>
-                                            <div class="invalid-feedback"> Please provide a valid state. </div>
-                                        </div>
-                                        <div class="col-md-3 mb-3">
-                                            <label for="zip">Zip *</label>
-                                            <input type="text" class="form-control" id="zip" placeholder="" required>
-                                            <div class="invalid-feedback"> Zip code required. </div>
-                                        </div>
-                                    </div>
-                                    <hr class="mb-4">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="same-address">
-                                        <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="save-info">
-                                        <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                                    </div>
-                                    <hr class="mb-4">
-                                    <div class="title"> <span>Payment</span> </div>
-                                    <div class="d-block my-3">
-                                        <div class="custom-control custom-radio">
-                                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                            <label class="custom-control-label" for="credit">Credit card</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="debit">Debit card</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="paypal">Paypal</label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cc-name">Name on card</label>
-                                            <input type="text" class="form-control" id="cc-name" placeholder="" required> <small class="text-muted">Full name as displayed on card</small>
-                                            <div class="invalid-feedback"> Name on card is required </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="cc-number">Credit card number</label>
-                                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                                            <div class="invalid-feedback"> Credit card number is required </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-3 mb-3">
-                                            <label for="cc-expiration">Expiration</label>
-                                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                                            <div class="invalid-feedback"> Expiration date required </div>
-                                        </div>
-                                        <div class="col-md-3 mb-3">
-                                            <label for="cc-expiration">CVV</label>
-                                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                                            <div class="invalid-feedback"> Security code required </div>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <div class="payment-icon">
-                                                <ul>
-                                                    <li><img class="img-fluid" src="images/payment-icon/1.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/2.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/3.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/5.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/7.png" alt=""></li>
-                                                </ul>
+                                <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
+                                    <div class="list-group-collapse sub-men">
+                                        <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Clothing <small class="text-muted">(100)</small>
+                                        </a>
+                                        <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
+                                            <div class="list-group">
+                                                <a href="#" class="list-group-item list-group-item-action active">T-Shirts <small class="text-muted">(50)</small></a>
+                                                <a href="#" class="list-group-item list-group-item-action">Polo T-Shirts <small class="text-muted">(10)</small></a>
+                                                <a href="#" class="list-group-item list-group-item-action">Round Neck T-Shirts <small class="text-muted">(10)</small></a>
+                                                <a href="#" class="list-group-item list-group-item-action">V Neck T-Shirts <small class="text-muted">(10)</small></a>
+                                                <a href="#" class="list-group-item list-group-item-action">Hooded T-Shirts <small class="text-muted">(20)</small></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <hr class="mb-1"> </form>
+                                    <div class="list-group-collapse sub-men">
+                                        <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Footwear 
+                                            <small class="text-muted">(50)</small>
+                                        </a>
+                                        <div class="collapse" id="sub-men2" data-parent="#list-group-men">
+                                            <div class="list-group">
+                                                <a href="#" class="list-group-item list-group-item-action">Sports Shoes <small class="text-muted">(10)</small></a>
+                                                <a href="#" class="list-group-item list-group-item-action">Sneakers <small class="text-muted">(20)</small></a>
+                                                <a href="#" class="list-group-item list-group-item-action">Formal Shoes <small class="text-muted">(20)</small></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="list-group-item list-group-item-action"> Men  <small class="text-muted">(150) </small></a>
+                                    <a href="#" class="list-group-item list-group-item-action">Accessories <small class="text-muted">(11)</small></a>
+                                    <a href="#" class="list-group-item list-group-item-action">Bags <small class="text-muted">(22)</small></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-sm-6 col-lg-6 mb-3">
-                            <div class="row">
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="shipping-method-box">
-                                        <div class="title-left">
-                                            <h3>Shipping Method</h3>
-                                        </div>
-                                        <div class="mb-4">
-                                            <div class="custom-control custom-radio">
-                                                <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
-                                                <label class="custom-control-label" for="shippingOption1">Standard Delivery</label> <span class="float-right font-weight-bold">FREE</span> </div>
-                                            <div class="ml-4 mb-2 small">(3-7 business days)</div>
-                                            <div class="custom-control custom-radio">
-                                                <input id="shippingOption2" name="shipping-option" class="custom-control-input" type="radio">
-                                                <label class="custom-control-label" for="shippingOption2">Express Delivery</label> <span class="float-right font-weight-bold">$10.00</span> </div>
-                                            <div class="ml-4 mb-2 small">(2-4 business days)</div>
-                                            <div class="custom-control custom-radio">
-                                                <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
-                                                <label class="custom-control-label" for="shippingOption3">Next Business day</label> <span class="float-right font-weight-bold">$20.00</span> </div>
-                                        </div>
-                                    </div>
+                            <div class="filter-price-left">
+                                <div class="title-left">
+                                    <h3>Price</h3>
                                 </div>
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="odr-box">
-                                        <div class="title-left">
-                                            <h3>Shopping cart</h3>
-                                        </div>
-                                        <div class="rounded p-2 bg-light">
-                                            <div class="media mb-2 border-bottom">
-                                                <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                                    <div class="small text-muted">Price: $80.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $80.00</div>
-                                                </div>
-                                            </div>
-                                            <div class="media mb-2 border-bottom">
-                                                <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                                    <div class="small text-muted">Price: $60.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $60.00</div>
-                                                </div>
-                                            </div>
-                                            <div class="media mb-2">
-                                                <div class="media-body"> <a href="detail.html"> Lorem ipsum dolor sit amet</a>
-                                                    <div class="small text-muted">Price: $40.00 <span class="mx-2">|</span> Qty: 1 <span class="mx-2">|</span> Subtotal: $40.00</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="price-box-slider">
+                                    <div id="slider-range"></div>
+                                    <p>
+                                        <input type="text" id="amount" readonly style="border:0; color:#fbb714; font-weight:bold;">
+                                        <button class="btn hvr-hover" type="submit">Filter</button>
+                                    </p>
                                 </div>
-                                <div class="col-md-12 col-lg-12">
-                                    <div class="order-box">
-                                        <div class="title-left">
-                                            <h3>Your order</h3>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="font-weight-bold">Product</div>
-                                            <div class="ml-auto font-weight-bold">Total</div>
-                                        </div>
-                                        <hr class="my-1">
-                                        <div class="d-flex">
-                                            <h4>Sub Total</h4>
-                                            <div class="ml-auto font-weight-bold"> $ 440 </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <h4>Discount</h4>
-                                            <div class="ml-auto font-weight-bold"> $ 40 </div>
-                                        </div>
-                                        <hr class="my-1">
-                                        <div class="d-flex">
-                                            <h4>Coupon Discount</h4>
-                                            <div class="ml-auto font-weight-bold"> $ 10 </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <h4>Tax</h4>
-                                            <div class="ml-auto font-weight-bold"> $ 2 </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <h4>Shipping Cost</h4>
-                                            <div class="ml-auto font-weight-bold"> Free </div>
-                                        </div>
-                                        <hr>
-                                        <div class="d-flex gr-total">
-                                            <h5>Grand Total</h5>
-                                            <div class="ml-auto h5"> $ 388 </div>
-                                        </div>
-                                        <hr> </div>
-                                </div>
-                                <div class="col-12 d-flex shopping-box"> <a href="checkout.html" class="ml-auto btn hvr-hover">Place Order</a> </div>
                             </div>
+                            <div class="filter-brand-left">
+                                <div class="title-left">
+                                    <h3>Brand</h3>
+                                </div>
+                                <div class="brand-box">
+                                    <ul>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios1" value="Yes" type="radio">
+                                                <label for="Radios1"> Supreme </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios2" value="No" type="radio">
+                                                <label for="Radios2"> A Bathing Ape </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios3" value="declater" type="radio">
+                                                <label for="Radios3"> The Hundreds </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios4" value="declater" type="radio">
+                                                <label for="Radios4"> Alife </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios5" value="declater" type="radio">
+                                                <label for="Radios5"> Neighborhood </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios6" value="declater" type="radio">
+                                                <label for="Radios6"> CLOT </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios7" value="declater" type="radio">
+                                                <label for="Radios7"> Acapulco Gold </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios8" value="declater" type="radio">
+                                                <label for="Radios8"> UNDFTD </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios9" value="declater" type="radio">
+                                                <label for="Radios9"> Mighty Healthy </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="radio radio-danger">
+                                                <input name="survey" id="Radios10" value="declater" type="radio">
+                                                <label for="Radios10"> Fiberops </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                    <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+                        <div class="right-product-box">
+                            <div class="product-item-filter row">
+                                <div class="col-12 col-sm-8 text-center text-sm-left">
+                                    <div class="toolbar-sorter-right">
+                                        <span>Sort by </span>
+                                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                                            <option data-display="Select">Nothing</option>
+                                            <option value="1">Popularity</option>
+                                            <option value="2">High Price ? High Price</option>
+                                            <option value="3">Low Price ? High Price</option>
+                                            <option value="4">Best Selling</option>
+                                        </select>
+                                    </div>
+                                    <p>Showing all 4 results</p>
+                                </div>
+                                <div class="col-12 col-sm-4 text-center text-sm-right">
+                                    <ul class="nav nav-tabs ml-auto">
+                                        <li>
+                                            <a class="nav-link active" href="#grid-view" data-toggle="tab"> <i class="fa fa-th"></i> </a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="#list-view" data-toggle="tab"> <i class="fa fa-list-ul"></i> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
+                            <div class="row product-categorie-box">
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="sale">Sale</p>
+                                                        </div>
+                                                        <img src="images/accesorio2.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Luces Led</h4>
+                                                        <h5> $5.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="new">New</p>
+                                                        </div>
+                                                        <img src="images/accesorio3.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="sale">Sale</p>
+                                                        </div>
+                                                        <img src="images/accesorio4.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="new">New</p>
+                                                        </div>
+                                                        <img src="images/instagram-img-01.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="sale">Sale</p>
+                                                        </div>
+                                                        <img src="images/instagram-img-05.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="sale">Sale</p>
+                                                        </div>
+                                                        <img src="images/instagram-img-03.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="sale">Sale</p>
+                                                        </div>
+                                                        <img src="images/instagram-img-08.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="sale">Sale</p>
+                                                        </div>
+                                                        <img src="images/instagram-img-08.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                <div class="products-single fix">
+                                                    <div class="box-img-hover">
+                                                        <div class="type-lb">
+                                                            <p class="new">New</p>
+                                                        </div>
+                                                        <img src="images/instagram-img-08.jpg" class="img-fluid" alt="Image">
+                                                        <div class="mask-icon">
+                                                            <ul>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                            </ul>
+                                                            <a class="cart" href="#">Add to Cart</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="why-text">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> $9.79</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div role="tabpanel" class="tab-pane fade" id="list-view">
+                                        <div class="list-view-box">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                    <div class="products-single fix">
+                                                        <div class="box-img-hover">
+                                                            <div class="type-lb">
+                                                                <p class="new">New</p>
+                                                            </div>
+                                                            <img src="images/instagram-img-09.jpg" class="img-fluid" alt="Image">
+                                                            <div class="mask-icon">
+                                                                <ul>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                                                    <div class="why-text full-width">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> <del>$ 60.00</del> $40.79</h5>
+                                                        <p>Integer tincidunt aliquet nibh vitae dictum. In turpis sapien, imperdiet quis magna nec, iaculis ultrices ante. Integer vitae suscipit nisi. Morbi dignissim risus sit amet orci porta, eget aliquam purus
+                                                            sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
+                                                            Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.</p>
+                                                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-view-box">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                    <div class="products-single fix">
+                                                        <div class="box-img-hover">
+                                                            <div class="type-lb">
+                                                                <p class="sale">Sale</p>
+                                                            </div>
+                                                            <img src="images/instagram-img-06.jpg" class="img-fluid" alt="Image">
+                                                            <div class="mask-icon">
+                                                                <ul>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                                                    <div class="why-text full-width">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> <del>$ 60.00</del> $40.79</h5>
+                                                        <p>Integer tincidunt aliquet nibh vitae dictum. In turpis sapien, imperdiet quis magna nec, iaculis ultrices ante. Integer vitae suscipit nisi. Morbi dignissim risus sit amet orci porta, eget aliquam purus
+                                                            sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
+                                                            Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.</p>
+                                                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list-view-box">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+                                                    <div class="products-single fix">
+                                                        <div class="box-img-hover">
+                                                            <div class="type-lb">
+                                                                <p class="sale">Sale</p>
+                                                            </div>
+                                                            <img src="images/instagram-img-09.jpg" class="img-fluid" alt="Image">
+                                                            <div class="mask-icon">
+                                                                <ul>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                                                    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                                </ul>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                                                    <div class="why-text full-width">
+                                                        <h4>Lorem ipsum dolor sit amet</h4>
+                                                        <h5> <del>$ 60.00</del> $40.79</h5>
+                                                        <p>Integer tincidunt aliquet nibh vitae dictum. In turpis sapien, imperdiet quis magna nec, iaculis ultrices ante. Integer vitae suscipit nisi. Morbi dignissim risus sit amet orci porta, eget aliquam purus
+                                                            sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
+                                                            Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.</p>
+                                                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
         <div class="instagram-box">
             <div class="main-instagram owl-carousel owl-theme">
                 <div class="item">
