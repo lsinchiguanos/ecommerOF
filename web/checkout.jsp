@@ -48,10 +48,8 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Iniciar Sesión</a></li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link" data-toggle="dropdown">Ventas</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
+                            <li class="nav-item"><a class="nav-link" href="checkout.jsp">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>

@@ -52,19 +52,19 @@
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Iniciar Sesión</a></li>
-                            <li class="dropdown active">
-                                <a href="#" class="nav-link" data-toggle="dropdown">Ventas</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="checkout.jsp">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>
                     <div class="attr-nav">
                         <ul>
                             <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li class="side-menu"><a href="#">
+                            <li class="side-menu">
+                                <a href="#">
                                     <i class="fa fa-shopping-bag"></i>
                                     <span class="badge">3</span>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="instagram-box">
             <div class="main-instagram owl-carousel owl-theme">
                 <div class="item">
@@ -388,26 +388,26 @@
         </footer>
         <div class="footer-copyright">
             <p class="footer-company">CycleShop All Rights Reserved. &copy; 2020 <a href="#">Grupo  D</a></p>
-                <a href="https://html.design/">html design</a></p>
-        </div>
-        <!-- copyright  -->
-        <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
-        <!-- JS FILES -->
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <!-- PLUGINS -->
-        <script src="js/jquery.superslides.min.js"></script>
-        <script src="js/bootstrap-select.js"></script>
-        <script src="js/inewsticker.js"></script>
-        <script src="js/bootsnav.js."></script>
-        <script src="js/images-loded.min.js"></script>
-        <script src="js/isotope.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/baguetteBox.min.js"></script>
-        <script src="js/form-validator.min.js"></script>
-        <script src="js/contact-form-script.js"></script>
-        <script src="js/custom.js"></script>
-    </body>
+            <a href="https://html.design/">html design</a></p>
+    </div>
+    <!-- copyright  -->
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+    <!-- JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- PLUGINS -->
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/inewsticker.js"></script>
+    <script src="js/bootsnav.js."></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>
+    <script src="js/custom.js"></script>
+</body>
 
 </html>

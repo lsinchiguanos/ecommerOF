@@ -45,7 +45,7 @@
                         <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
                             <li class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Catálogo</a></li>
+                            <li class="nav-item"><a class="nav-link" href="checkout.jsp">Catálogo</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>
@@ -53,32 +53,11 @@
                     <div class="attr-nav">
                         <ul>
                             <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li class="side-menu dropdown">
-                                <a href="#" class="dropdown-toggle" id="dropdown1" data-toggle="dropdown">
-                                    <i class="fa fa-shopping-bag"></i>
+                            <li class="side-menu">
+                                <a href="#">
                                     <i class="fa fa-shopping-bag"></i>
                                     <span class="badge">3</span>
                                 </a>
-                                <div id="carrito" class="dropdown-menu">
-                                    <table id="lista_carrito" class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>header</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            
-                                        </tbody>
-                                    </table>
-                                    <div class="row">
-                                        <div class="col">
-                                          <a href="#" id="ver_carrito" class="btn btn-primary">Ver carrito</a>  
-                                        </div>
-                                        <div class="col">
-                                          <a href="#" id="procesar_pedido" class="btn btn-danger">Pagar</a>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
                         </ul>
                     </div>
