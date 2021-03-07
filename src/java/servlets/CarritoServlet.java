@@ -5,12 +5,13 @@
  */
 package servlets;
 
-import com.google.gson.Gson;
-import controllers.ProductoController;
-import entidades.Producto;
+import controllers.CarritoController;
+import entidades.Carrito;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Lemmar Dell
  */
-public class ProductoServlet extends HttpServlet {
+public class CarritoServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,20 +33,21 @@ public class ProductoServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String opcion = String.valueOf(request.getParameter("opcion"));
-            List<Producto> listProducto = null;
-            if ("all".equals(opcion)) {
-                listProducto = new ProductoController().ListProducto();
-            } else {
-                
-            }
-            
-            String json = new Gson().toJson(listProducto);
-            out.print(json);
+            int producto_id = Integer.valueOf(request.getParameter("producto_id"));
+            int opcion = Integer.valueOf(request.getParameter("opcion"));
+            int cliente_id = Integer.valueOf(request.getParameter("cliente_id"));
+            double producto_precio = Double.valueOf(request.getParameter("producto_precio"));
+            Carrito carrito = new Carrito();
+            carrito.setCar_producto_id(producto_id);
+            carrito.setCar_precio(producto_precio);
+            carrito.setCar_cliente_id(cliente_id);
+            carrito.setCar_estado(opcion);
+            String mensaje = new CarritoController().newCarrito(carrito);
+            out.print(mensaje);
         }
     }
 
@@ -61,7 +63,11 @@ public class ProductoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(CarritoServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -75,7 +81,11 @@ public class ProductoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (SQLException ex) {
+            Logger.getLogger(CarritoServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

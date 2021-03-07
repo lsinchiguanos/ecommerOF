@@ -41,9 +41,9 @@
         <link href="css-text/css/set1.css" rel="stylesheet" type="text/css"/>
         <link href="css-text/css/normalize.css" rel="stylesheet" type="text/css"/>
     </head>
-    
+
     <%HttpSession s = request.getSession();%>
-    
+
     <body>
         <header class="main-header">
             <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav">
@@ -131,12 +131,12 @@
                     </label>
                 </span>
             </section>
-        
-                <div >
-                    <button id="btnRegistrarUsuario" class="login100-form-btn" style="width: 200px; margin-left:550px;margin-top:-90px">
-                        Registrarse
-                    </button>
-                </div>
+
+            <div >
+                <button id="btnRegistrarUsuario" class="login100-form-btn" style="width: 200px; margin-left:550px;margin-top:-90px">
+                    Registrarse
+                </button>
+            </div>
         </form>
     </div>
     <script src="css-text/js/classie.js" type="text/javascript"></script>

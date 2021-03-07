@@ -21,13 +21,33 @@ public class CarritoController extends conexion.ConexionDB {
     private ResultSet rs = null;
 
     public String newCarrito(Carrito carrito) throws SQLException {
-        String mensaje = "El carrito de compra se registro con éxito";
-        sql_command = "INSERT INTO public.carrito(\n"
-                + "	car_clien_id, car_producto_id, car_cantidad, car_precio, car_estado, created_at, updated_at)\n"
-                + "	VALUES (" + carrito.getCar_cliente_id() + ", " + carrito.getCar_producto_id() + ", " + carrito.getCar_cantidad() + "," + carrito.getCar_precio() + ");";
-
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
+        String mensaje = "false";
+        try {
+            sql_command = "INSERT INTO public.carrito(\n"
+                    + "	car_clien_id, car_producto_id, car_precio, car_estado)\n"
+                    + "	VALUES (" + carrito.getCar_cliente_id() + ", " + carrito.getCar_producto_id() + ", " + carrito.getCar_precio() + ", " + carrito.getCar_estado() + ");";
+            pst = getConecction().prepareStatement(sql_command);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                mensaje = "true";
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } finally {
+            try {
+                if (isConected()) {
+                    getConecction().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+        }
         return mensaje;
     }
 

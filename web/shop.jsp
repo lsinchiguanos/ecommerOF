@@ -296,7 +296,7 @@
                                                                         </a>
                                                                     </li>
                                                                 </ul>
-                                                                <a class="cart" onclick="sendCard(1)">Add to Cart</a>
+                                                                <a class="cart">Add to Cart</a>
                                                             </div>
                                                         </div>
                                                         <div class="why-text">
@@ -305,7 +305,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
 
@@ -584,6 +584,36 @@
                     }
                 }
                 ;
+
+                function sendCarrito(id_producto, valor, producto_precio) {
+                    /* 1 pendientes; 2 para favoritos */
+                    console.log(id_producto);
+                    console.log(valor);
+                    let dataobj = {
+                        producto_id: id_producto,
+                        opcion: valor,
+                        cliente_id: <%=session.getAttribute("cliente_id")%>,
+                        producto_precio: producto_precio
+                    };
+                    $.ajax({
+                        type: 'POST',
+                        url: 'CarritoServlet',
+                        data: dataobj,
+                        success: function (msg) {
+                            mensaje = msg;
+                            if (mensaje === 'true') {
+                                swal("Good job!", "You clicked the button!", "success");
+                            } else {
+                                swal("Good job!", "You clicked the button!", "error");
+                            }
+                        },
+                        error: function () {
+                            swal("Good job!", "You clicked the button!", "error");
+                        }
+                    });
+                }
+                ;
+
                 $(document).ready(ocultarControles());
             </script>
             <script src="jsservlets/shopjs.js" type="text/javascript"></script>

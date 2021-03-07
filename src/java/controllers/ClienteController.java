@@ -21,7 +21,7 @@ public class ClienteController extends conexion.ConexionDB {
     private ResultSet rs = null;
 
     public String newCliente(Cliente cliente) throws SQLException {
-        String mensaje = "El cliente ha sigo registrado con éxito";
+        String mensaje = "false";
         sql_command = "INSERT INTO public.cliente(\n"
                 + "	cliente_dni, cliente_apellido_paterno, cliente_apellido_materno, cliente_nombre, cliente_fecha_nacimiento, cliente_direccion, cliente_email, cliente_pass, cliente_telefono)\n"
                 + "	VALUES ('" + cliente.getPersona_dni() + "', '" + cliente.getPersona_apellido_paterno() + "', '" + cliente.getPersona_apellido_materno() + "', '" + cliente.getPersona_nombre() + "', "
