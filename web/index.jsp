@@ -151,31 +151,31 @@
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/t-shirts-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Ruta</a>
+                            <a class="btn hvr-hover" href="#">RUTA</a>
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/shirt-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Montaña</a>
+                            <a class="btn hvr-hover" href="#">MONTAÑA</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/wallet-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Niños</a>
+                            <a class="btn hvr-hover" href="#">NIÑOS</a>
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/women-bag-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Amateur</a>
+                            <a class="btn hvr-hover" href="#">ELÉCTRICAS</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/shoes-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Profesional</a>
+                            <a class="btn hvr-hover" href="#">PROFESIONAL</a>
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/women-shoes-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Aficionado</a>
+                            <a class="btn hvr-hover" href="#">CLÁSICAS</a>
                         </div>
                     </div>
                 </div>
