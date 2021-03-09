@@ -48,7 +48,7 @@
                             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
                             <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact-us.jsp">Sugerencias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>
@@ -165,7 +165,7 @@
                             <a class="btn hvr-hover" href="#">NIÑOS</a>
                         </div>
                         <div class="shop-cat-box">
-                            <img class="img-fluid" src="images/women-bag-img.jpg" alt="" />
+                            <img class="img-fluid" src="images/women-bag-img.jpg" style="height:230px "alt="" />
                             <a class="btn hvr-hover" href="#">ELÉCTRICAS</a>
                         </div>
                     </div>
