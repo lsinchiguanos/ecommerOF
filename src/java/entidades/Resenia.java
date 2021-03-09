@@ -21,6 +21,12 @@ public class Resenia {
     public Resenia() {
     }
 
+    public Resenia(int cliente_id, String resenia_descripcion, int resenia_calificacion) {
+        this.cliente_id = cliente_id;
+        this.resenia_descripcion = resenia_descripcion;
+        this.resenia_calificacion = resenia_calificacion;
+    }
+
     public int getResenia_id() {
         return resenia_id;
     }

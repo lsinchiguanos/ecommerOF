@@ -21,13 +21,34 @@ public class ReseniaController extends conexion.ConexionDB {
     private ResultSet rs = null;
 
     public String newResenia(Resenia resenia) throws SQLException {
-        String mensaje = "La resenia se registro con éxito";
+        String mensaje = "false";
         sql_command = "INSERT INTO public.resenias(\n"
-                + "	resenia_id, cliente_id, resenia_descripcion, resenia_calificacion)\n"
+                + "	cliente_id, resenia_descripcion, resenia_calificacion)\n"
                 + "	VALUES (" + resenia.getCliente_id() + ", '" + resenia.getResenia_descripcion() + "'," + resenia.getResenia_calificacion() + ");";
-
-        pst = getConecction().prepareStatement(sql_command);
-        rs = pst.executeQuery();
+       try {
+            pst = getConecction().prepareStatement(sql_command);
+            rs = pst.executeQuery();
+            if (rs.next()) {
+                mensaje = "true";
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+            mensaje = "false";
+        } finally {
+            try {
+                if (isConected()) {
+                    getConecction().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+        }
         return mensaje;
     }
 

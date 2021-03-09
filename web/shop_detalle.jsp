@@ -51,6 +51,7 @@
                             <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
                             <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
+                            <li id="sugerencia" class="nav-item" style="display: none;" ><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
                             <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
                         </ul>
                     </div>
@@ -492,6 +493,7 @@
             if (sesion_id > 0) {
                 console.log('Si esta logeado');
                 document.getElementById('iniciosesionop').style.display = 'none';
+                document.getElementById('sugerencia').style.display = 'block';
             }
         }
         ;
