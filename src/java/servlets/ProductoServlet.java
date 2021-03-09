@@ -37,13 +37,13 @@ public class ProductoServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String opcion = String.valueOf(request.getParameter("opcion"));
+            int id_producto = Integer.valueOf(request.getParameter("id_producto"));
             List<Producto> listProducto = null;
             if ("all".equals(opcion)) {
                 listProducto = new ProductoController().ListProducto();
             } else {
-                
+                listProducto = new ProductoController().ListProducto(id_producto);
             }
-            
             String json = new Gson().toJson(listProducto);
             out.print(json);
         }
