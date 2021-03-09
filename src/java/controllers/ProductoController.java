@@ -134,5 +134,54 @@ public class ProductoController extends conexion.ConexionDB {
         }
         return destinos;
     }
+    
+    public List<Producto> ListProducto(int id_productos) {
+        List<Producto> destinos = new ArrayList<Producto>();
+        pst = null;
+        rs = null;
+        try {
+            sql_command = "SELECT\n"
+                    + "	producto_id,\n"
+                    + "	producto_codigo,\n"
+                    + "	producto_nombre,\n"
+                    + "	producto_imagen,\n"
+                    + "	producto_precio,\n"
+                    + "	producto_categoria,\n"
+                    + "	producto_descripcion,\n"
+                    + "	producto_aro\n"
+                    + "	FROM producto where producto_id = " + id_productos;
+            pst = getConecction().prepareStatement(sql_command);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                Producto newProducto = new Producto();
+                newProducto.setProducto_id(Integer.valueOf(rs.getString("producto_id")));
+                newProducto.setProducto_codigo(String.valueOf(rs.getString("producto_codigo")));
+                newProducto.setProducto_nombre(String.valueOf(rs.getString("producto_nombre")));
+                newProducto.setProducto_imagen(String.valueOf(rs.getString("producto_imagen")));
+                newProducto.setProducto_precio(rs.getDouble("producto_precio"));
+                newProducto.setProducto_categoria(String.valueOf(rs.getString("producto_categoria")));
+                newProducto.setProducto_descripcion(String.valueOf(rs.getString("producto_descripcion")));
+                newProducto.setProducto_aro(rs.getInt("producto_aro"));
+                destinos.add(newProducto);
+            }
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } finally {
+            try {
+                if (isConected()) {
+                    getConecction().close();
+                }
+                if (pst != null) {
+                    pst.close();
+                }
+                if (rs != null) {
+                    rs.close();
+                }
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+        return destinos;
+    }
 
 }

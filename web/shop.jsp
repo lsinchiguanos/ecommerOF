@@ -286,7 +286,7 @@
                                                             <div class="mask-icon">
                                                                 <ul>
                                                                     <li>
-                                                                        <a href="#" data-toggle="tooltip" data-placement="right" title="View">
+                                                                        <a href="shop_detalle.jsp?id_producto=1" data-toggle="tooltip" data-placement="right" title="View">
                                                                             <i class="fas fa-eye"></i>
                                                                         </a>
                                                                     </li>
@@ -410,7 +410,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
