@@ -51,7 +51,7 @@
                             <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
                             <li id="sugerencia" class="nav-item" style="display: none;" ><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
-                            <li class="nav-item"><a class="nav-link" href="">Acerca de</a></li>
+                            <li class="nav-item"><a class="nav-link" href="acercade.jsp">Acerca de</a></li>
                         </ul>
                     </div>
                     <div class="attr-nav">
