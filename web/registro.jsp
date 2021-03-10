@@ -104,7 +104,7 @@
                 <span class="input input--hoshi"style="margin-top:3px; margin-left:55px; width:300px">
                     <input class="input__field input__field--hoshi" type="date" id="FechaNaci" />
                     <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="FechaNaci">
-                        <span class="input__label-content input__label-content--hoshi">Fecha Nacimiento:</span>
+                        <span class="input__label-content input__label-content--hoshi"></span>
                     </label>
                 </span>
                 <span class="input input--hoshi"style="margin-top:3px; margin-left:55px; width:300px">

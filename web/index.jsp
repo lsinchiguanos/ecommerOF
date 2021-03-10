@@ -59,7 +59,7 @@
                             <li class="side-menu">
                                 <a href="#">
                                     <i class="fa fa-shopping-bag"></i>
-                                    <span class="badge">3</span>
+                                    <img src="images/cerrar-sesion.png" style="height:20px; margin-left: 8px" alt=""/>
                                 </a>
                             </li>
                         </ul>

@@ -58,12 +58,14 @@
                     <div class="attr-nav">
                         <ul>
                             <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                            <li class="side-menu"><a href="#">
+                            <li class="side-menu" style="margin-top:-5px">
+                                <a href="#">
                                     <i class="fa fa-shopping-bag"></i>
-                                    <span class="badge">3</span>
-                                </a></li>
+                                    <img src="images/cerrar-sesion.png" style="height:20px; margin-left: 8px" alt=""/>
+                                </a>
+                            </li>
                         </ul>
-                    </div>
+                    </div>   
                 </div>
                 <div class="side">
                     <a href="#" class="close-side"><i class="fa fa-times"></i></a>
