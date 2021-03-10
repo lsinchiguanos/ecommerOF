@@ -20,6 +20,10 @@
         <servlet-name>SugerenciaServlet</servlet-name>
         <servlet-class>servlets.SugerenciaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CarritoOperaciones</servlet-name>
+        <servlet-class>servlets.CarritoOperaciones</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClienteServlet</servlet-name>
         <url-pattern>/ClienteServlet</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>SugerenciaServlet</servlet-name>
         <url-pattern>/SugerenciaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarritoOperaciones</servlet-name>
+        <url-pattern>/CarritoOperaciones</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
