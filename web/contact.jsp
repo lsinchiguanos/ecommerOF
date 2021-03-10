@@ -50,23 +50,20 @@
                             <li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
                             <li id="iniciosesionop" class="nav-item" ><a class="nav-link" href="login.jsp">Iniciar Sesión</a></li>
                             <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
-                            <li id="sugerencia" class="nav-item" style="display: none;" ><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
+                            <li id="sugerencia" class="nav-item active" style="display: none;" ><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
                             <li class="nav-item"><a class="nav-link" href="acercade.jsp">Acerca de</a></li>
                             <li class="nav-item" ><a class="nav-link" href="carrito.jsp">Carrito</a></li>
+                        </ul>
+                    </div>
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="side-menu"><a href="carrito.jsp"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li class="side-menu"><a href="#"><img src="images/cerrar-sesion.png" style="height:20px; margin-left: 8px" alt=""/></a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <div class="top-search">
-            <div class="container">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                    <input type="text" class="form-control" placeholder="Search">
-                    <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
-                </div>
-            </div>
-        </div>
         <div class="all-title-box">
             <div class="container">
                 <div class="row">

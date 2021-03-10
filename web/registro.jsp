@@ -62,7 +62,6 @@
                             <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
                             <li id="sugerencia" class="nav-item" style="display: none;" ><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
                             <li class="nav-item"><a class="nav-link" href="acercade.jsp">Acerca de</a></li>
-                            <li class="nav-item" ><a class="nav-link" href="carrito.jsp">Carrito</a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,7 +104,7 @@
                 <span class="input input--hoshi"style="margin-top:3px; margin-left:55px; width:300px">
                     <input class="input__field input__field--hoshi" type="date" id="FechaNaci" />
                     <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="FechaNaci">
-                        <span class="input__label-content input__label-content--hoshi">Fecha Nacimiento:</span>
+                        <span class="input__label-content input__label-content--hoshi"></span>
                     </label>
                 </span>
                 <span class="input input--hoshi"style="margin-top:3px; margin-left:55px; width:300px">

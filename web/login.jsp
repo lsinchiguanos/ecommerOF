@@ -61,7 +61,6 @@
                             <li class="nav-item"><a class="nav-link" href="shop.jsp">Catálogo</a></li>
                             <li id="sugerencia" class="nav-item" style="display: none;" ><a class="nav-link" href="contact.jsp">Sugerencias</a></li>
                             <li class="nav-item"><a class="nav-link" href="acercade.jsp">Acerca de</a></li>
-                            <li class="nav-item" ><a class="nav-link" href="carrito.jsp">Carrito</a></li>
                         </ul>
                     </div>
                 </div>
